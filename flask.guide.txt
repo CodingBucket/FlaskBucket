@@ -1,0 +1,30 @@
+style="background-image: url('{{ url_for('static', filename='post-bg.jpg') }}')"
+
+cmd: pip install virtualenv
+
+cmd: virtualenv venv_name
+cmd: venv/scripts/activate
+cmd: deactivate
+
+cmd: pip install Flask
+cmd: pip install flask-mysqldb
+cmd: pip install Flask-WTF
+cmd: pip install passlib
+
+cmd: pip install Flask-RESTful
+cmd: pip install flask-sqlalchemy
+cmd: pip install flask-marshmallow
+cmd: pip install marshmallow-sqlalchemy
+cmd: pip install flask-admin
+cmd: pip install flask-bootstrap
+
+=> Create sqllite db and tables
+cmd: python
+cmd: from app import db
+cmd: db.create_all()
+
+=> Config
+DEBUG = True
+SECRET_KEY = '123'
+SQLALCHEMY_DATABASE_URI = 'sqlite:///db.sqlite3'
+SQLALCHEMY_TRACK_MODIFICATIONS = False
