@@ -17,6 +17,7 @@ cmd: pip install flask-marshmallow
 cmd: pip install marshmallow-sqlalchemy
 cmd: pip install flask-admin
 cmd: pip install flask-bootstrap
+cmd: pip install flask-restplus
 
 => Create sqllite db and tables
 cmd: python
